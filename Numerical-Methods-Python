@@ -1,0 +1,12 @@
+def bisection(f, a, b, tol=0.001):
+    while (b - a) / 2 > tol:
+        mid = (a + b) / 2
+        if f(mid) == 0:
+            return mid
+        elif f(a) * f(mid) < 0:
+            b = mid
+        else:
+            a = mid
+    return (a + b) / 2
+f = lambda x: x**2 - 4
+print("Root:", bisection(f, 0, 3))
