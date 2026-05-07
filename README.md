@@ -23,3 +23,17 @@ python numerical_methods.py
 
 ### Requirements
 pip install numpy
+
+
+## financial_data_analysis.py
+Financial time-series analysis implemented from scratch using NumPy.
+
+Covers:
+- Daily returns and cumulative return calculation
+- Simple Moving Average (SMA) and Exponential Moving Average (EMA)
+- Volatility measurement (annualized standard deviation)
+- Sharpe Ratio — risk-adjusted return metric
+- Maximum Drawdown analysis
+- Pearson correlation between two assets
+
+Run: `python financial_data_analysis.py`
