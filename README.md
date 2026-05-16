@@ -37,3 +37,18 @@ Covers:
 - Pearson correlation between two assets
 
 Run: `python financial_data_analysis.py`
+
+
+### `statistics_calculator.py`
+Original implementation covering core statistical concepts using Python and NumPy.
+
+**Topics covered:**
+- Descriptive statistics (mean, median, std dev, skewness, kurtosis, IQR)
+- Probability distributions (Normal, Binomial, Poisson)
+- Hypothesis testing (one-sample t-test)
+- Correlation and covariance analysis (Pearson r)
+
+**Run the demo:**
+```bash
+python statistics_calculator.py
+```
