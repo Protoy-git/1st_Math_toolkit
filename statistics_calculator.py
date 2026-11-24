@@ -25,6 +25,8 @@ def descriptive_stats(data):
     data = np.array(data, dtype=float)
     n = len(data)
 
+    if n == 0:
+        raise ValueError("Dataset is empty. Please provide some data.")
     stats = {
         "count":        n,
         "mean":         np.mean(data),
@@ -54,8 +56,16 @@ def _skewness(data):
 def _kurtosis(data):
     """Excess kurtosis — measures tail heaviness relative to normal distribution."""
     n = len(data)
+
+    if n < 4:
+        raise ValueError("Kurtosis requires at least 4 data points.")
+
     mean = np.mean(data)
     std = np.std(data, ddof=1)
+
+    if std == 0:
+        raise ValueError("Kurtosis is undefined when all data points are identical.")
+
     return (n * (n + 1) / ((n - 1) * (n - 2) * (n - 3))) * \
            np.sum(((data - mean) / std) ** 4) - \
            (3 * (n - 1) ** 2 / ((n - 2) * (n - 3)))
